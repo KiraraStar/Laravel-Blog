@@ -1,0 +1,170 @@
+body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Courier New", "新宋体" !important;
+    background-color: white;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+     width: 6px;
+     height: 6px;
+     background-color: #eee;
+ }
+body::-webkit-scrollbar-thumb{
+    opacity: .7;
+    border-radius: 3px;
+    background-color: #66BAB7;
+}
+body::-webkit-scrollbar-track {
+    opacity: 0.7;
+    background-color: white;
+}
+body::-webkit-scrollbar-track-piece{
+    opacity: 0;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+/*nav*/
+.nav{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    opacity: .8;
+    z-index: 100;
+    color: white;
+    overflow: hidden;
+    font-size: 18px;
+}
+.nav-bar{
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.nav-brand{
+    height: 100%;
+    width: auto;
+    float: left;
+    line-height: 50px;
+    padding: 0 25px 0 0;
+    cursor: pointer;
+    font-size: 25px;
+}
+.nav-ul-control{
+    float: right;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+}
+.nav-ul-control-line{
+    margin-left: 30%;
+    width: 40%;
+    background-color: white;
+    height: 2px;
+}
+.nav-ul-control-line:nth-child(1){
+    margin-top: 18px;
+}
+.nav-ul-control-line:nth-child(2){
+    margin-top: 4px;
+}
+.nav-ul-control-line:nth-child(3){
+    margin-top: 4px;
+}
+.nav-ul{
+    height: 100%;
+    width: auto;
+    float: right;
+}
+.nav-ul li{
+    display: inline-block;
+    line-height: 50px;
+    width: auto;
+    height: 100%;
+    padding: 0 12.5px;
+    cursor: pointer;
+}
+.nav-search{
+    float: right;
+    width: 125px;
+    height: 50px;
+}
+.nav-search input{
+    margin: 10px 0;
+    width: 100px;
+    height: 30px;
+    padding: 0 12.5px;
+    border: 0;
+    font-size: 18px;
+    font-family: "Courier New", "仿宋";
+}
+.nav-search input:focus{
+    outline: none;
+}
+.nav-hover-class{
+    opacity: .8;
+    background-color: #66BAB7;
+    transition: all .3s linear;
+}
+/**footer*/
+.footer-container{
+    padding: 40px 0;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    opacity: .8;
+    background-color: #66BAB7;
+}
+.footer-container>div{
+    text-align: center;
+    color: white;
+    cursor: default;
+}
+/*分割线,unit-block的css*/
+.line-block{
+    color: #66BAB7;
+    cursor: default;
+}
+.line{
+    margin: 30px 0 0 0;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, #66BAB7 0%, #66BAB7 50%, transparent 50%);
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+}
+.icon-line{
+    display: inline-block;
+    font-weight: bolder;
+    height: 20px;
+    cursor: default;
+}
+.icon-line>svg{
+    vertical-align: top;
+}
+.line-span{
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    height: 20px;
+    line-height: 20px;
+}
+@media screen and (max-width: 900px) {
+    body::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+        display: none !important;
+    }
+    body::-webkit-scrollbar-thumb{
+    }
+}
+

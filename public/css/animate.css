@@ -1,0 +1,67 @@
+/*导航栏tag动画*/
+.rotate-1-origin{
+    transform: rotate(0);
+    transition: all .3s linear;
+    transform-origin: left;
+}
+.rotate-1-change{
+    transform: rotate(39deg);
+    transition: all .3s linear;
+    transform-origin: left;
+}
+
+.rotate-3-origin{
+    transform: rotate(0);
+    transition: all .3s linear;
+    transform-origin: left;
+}
+.rotate-3-change{
+    transform: rotate(-39deg);
+    transition: all .3s linear;
+    transform-origin: left;
+}
+.position-origin{
+    margin-right: 0;
+    transition: all .3s linear;
+    opacity: 1;
+}
+.position-change{
+    margin-right: -500px;
+    transition: all .3s linear;
+    opacity: 0;
+}
+/*主页的向上移动动画*/
+.add-opacity-box{
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+    opacity: .7 !important;
+    transition: all .8s linear;
+}
+.add-opacity-line{
+    margin-bottom: 30px !important;
+    margin-top: 0 !important;
+    opacity: .7 !important;
+    transition: all .8s linear;
+}
+.nav-bg-color{
+    background-color: #66BAB7;
+    transition: background-color .6s linear;
+}
+.nav-bg-color-trans{
+    background-color: transparent;
+    transition: background-color .6s linear;
+}
+.intro-move{
+    margin: 0 240px !important;
+    opacity: .7 !important;
+    transition: all .7s linear;
+}
+.intro-move-margin-0{
+    margin-left: 0 !important;
+    opacity: .7 !important;
+    transition: all .7s linear;
+}
+.intro-svg{
+    opacity: .7 !important;
+    transition: all .7s linear;
+}
