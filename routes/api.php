@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/post/image',[ApiController::class,'postImage']);// test 上传图片
+Route::post('/post/code',[ApiController::class,'postCode']);//post code
+

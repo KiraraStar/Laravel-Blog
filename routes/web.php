@@ -45,3 +45,4 @@ Route::group(['middleware'=>'admin'], function (){
 
 Route::any('/art/{id}',[ArticleController::class,'articleShow']); //显示文章
 Route::get('/to/api/{content}',[ApiController::class,'getApi']); //给code页面提供api
+Route::get('/get/code',[ApiController::class,'getCode']);
