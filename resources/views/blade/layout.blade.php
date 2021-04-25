@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
 </head>
 <style>
-    body{
+    body {
         padding: 0;
         margin: 0;
         border: 0;
@@ -14,6 +14,7 @@
         background-color: white;
         overflow-x: hidden;
     }
+
     ul {
         list-style-type: none;
         padding: 0;
@@ -22,7 +23,7 @@
 </style>
 <style>
     /*nav相关*/
-    .nav{
+    .nav {
         position: fixed;
         height: 50px;
         width: 100%;
@@ -34,12 +35,14 @@
         font-size: 18px;
         box-shadow: 0 3px 10px #464646;
     }
-    .nav-bar{
+
+    .nav-bar {
         height: 100%;
         margin-left: 5%;
         margin-right: 5%;
     }
-    .nav-brand{
+
+    .nav-brand {
         height: 100%;
         width: auto;
         float: left;
@@ -48,6 +51,7 @@
         cursor: pointer;
         font-size: 25px;
     }
+
     .nav-ul-control {
         float: right;
         height: 50px;
@@ -56,69 +60,84 @@
         cursor: pointer;
         z-index: 1000;
     }
+
     .nav-ul-control-line:nth-child(1) {
         margin-top: 18px;
     }
+
     .nav-ul-control-line:nth-child(2) {
         margin-top: 4px;
     }
+
     .nav-ul-control-line:nth-child(3) {
         margin-top: 4px;
     }
+
     .rotate-1-origin {
         transform: rotate(0);
         transition: all .3s linear;
         transform-origin: left;
     }
+
     .rotate-1-change {
         transform: rotate(39deg);
         transition: all .3s linear;
         transform-origin: left;
     }
+
     .rotate-3-origin {
         transform: rotate(0);
         transition: all .3s linear;
         transform-origin: left;
     }
+
     .rotate-3-change {
         transform: rotate(-39deg);
         transition: all .3s linear;
         transform-origin: left;
     }
+
     .nav-ul-control-line {
         margin-left: 30%;
         width: 40%;
         background-color: #464646;
         height: 2px;
     }
+
     .nav-ul {
         height: 100%;
         width: auto;
         float: right;
     }
+
     .nav-ul li {
         display: inline-block;
         line-height: 50px;
         width: auto;
+        min-width: 60px;
         height: 100%;
         padding: 0 12.5px;
         cursor: pointer;
+        text-align: center;
     }
     .position-origin {
         margin-right: 0;
         transition: all .3s linear;
         opacity: 1;
     }
+
     .position-change {
-        margin-right: -500px;
+        margin-right: -600px;
         transition: all .3s linear;
         opacity: 0;
     }
-    .nav-ul li>a:link,.nav-ul li>a:visited,.nav-ul li>a:active{
+
+    .nav-ul li > a:link, .nav-ul li > a:visited, .nav-ul li > a:active {
         color: #464646;
         text-decoration: none;
     }
-    .nav-ul li:hover{
+
+    .nav-ul li:hover {
         opacity: .8;
         background-color: #66BAB7;
         color: white;
@@ -130,6 +149,7 @@
     .bg-img {
         /*background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(../image/new.jpg);*/
     }
+
     .bg-decoration {
         opacity: 1;
         background-position: center center;
@@ -143,8 +163,9 @@
         filter: blur(2px);
         z-index: -100;
     }
+
     /*body相关*/
-    .body-container{
+    .body-container {
         position: relative;
         padding-top: 50px;
         min-height: 700px;
@@ -162,10 +183,11 @@
         width: 100%;
         opacity: .8;
         background-color: white;
-        border-top: 1px solid rgba(46,46,46,0.4);
+        border-top: 1px solid rgba(46, 46, 46, 0.4);
         /*box-shadow: 0px -3px 10px #464646;*/
     }
-    .footer-container>div {
+
+    .footer-container > div {
         text-align: center;
         color: #464646;
         cursor: default;
@@ -173,51 +195,51 @@
 </style>
 @yield('style')
 <body>
-   <nav id="nav" class="nav">
-       <div class="nav-bar">
-           <div class="nav-brand">Miiro</div>
-           <div class="nav-ul-control">
-               <div class="nav-ul-control-line rotate-1-origin"></div>
-               <div class="nav-ul-control-line"></div>
-               <div class="nav-ul-control-line rotate-3-origin"></div>
-           </div>
-           <ul class="nav-ul">
-               <li><a href="{{url('/')}}">Home</a></li>
-               <li><a href="#">About</a></li>
-               <li><a href="{{url('/links')}}">Links</a></li>
-               <li><a href="#">Img</a></li>
-               <li><a href="#">Search</a></li>
-           </ul>
-       </div>
-   </nav>
-   <div class="bg-decoration bg-img"></div>
-   <div class="body-container">
-        @yield('body')
-   </div>
-   <footer>
-       <div class="footer-container">
-           <div>Powered by Miiro</div>
-           <div>Just for fun</div>
-       </div>
-   </footer>
+<nav id="nav" class="nav">
+    <div class="nav-bar">
+        <div class="nav-brand">Miiro</div>
+        <div class="nav-ul-control">
+            <div class="nav-ul-control-line rotate-1-origin"></div>
+            <div class="nav-ul-control-line"></div>
+            <div class="nav-ul-control-line rotate-3-origin"></div>
+        </div>
+        <ul class="nav-ul">
+            <li><a href="{{url('/')}}">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="{{url('/links')}}">Links</a></li>
+            <li><a href="#">Img</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="bg-decoration bg-img"></div>
+<div class="body-container">
+    @yield('body')
+</div>
+<footer>
+    <div class="footer-container">
+        <div>Powered by Miiro</div>
+        <div>Just for fun</div>
+    </div>
+</footer>
 </body>
 <script>
 
-    $('.nav-brand').click(()=>{
+    $('.nav-brand').click(() => {
         window.location.href = '/';
     })
-    $('.nav-ul-control').click(function (){
+    $('.nav-ul-control').click(function () {
         let line1 = $('.nav-ul-control-line:nth-child(1)');
         let line2 = $('.nav-ul-control-line:nth-child(2)');
         let line3 = $('.nav-ul-control-line:nth-child(3)');
-        if(line1.hasClass('rotate-1-origin')){
+        if (line1.hasClass('rotate-1-origin')) {
             line2.css({
                 opacity: 0,
             });
             $('.nav-ul').removeClass('position-origin').addClass('position-change');
             line1.removeClass('rotate-1-origin').addClass('rotate-1-change');
             line3.removeClass('rotate-3-origin').addClass('rotate-3-change');
-        }else {
+        } else {
             line2.css({
                 opacity: 1,
             });
@@ -226,6 +248,30 @@
             line3.removeClass('rotate-3-change').addClass('rotate-3-origin');
         }
     });
+    let transBox = {
+        'Home': '主页',
+        'About': '关于',
+        'Links': '链接',
+        'Img': '图片',
+        'Search': '搜索'
+    }
+    var index;
+    $('.nav-ul>li').hover(function () {
+        index = $(this).find('a').html();
+        $(this).css({
+            width: $(this).width(),
+            padding: '0 12.5px',
+            transition: 'all .1s linear'
+        })
+        $(this).find('a').html(transBox[index]);
+        // (transBox[index])
+    }, function () {
+        $(this).css({
+            width: 'auto',
+            transition: 'all .1s linear'
+        })
+        $(this).find('a').html(index);
+    })
 </script>
 @yield('script')
 </html>

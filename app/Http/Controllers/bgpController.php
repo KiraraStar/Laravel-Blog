@@ -11,6 +11,6 @@ class bgpController extends Controller
         return view('bgp');
     }
     public function links(){
-        return view('links');
+        return view('Links');
     }
 }

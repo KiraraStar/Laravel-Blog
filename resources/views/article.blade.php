@@ -12,12 +12,12 @@
     <link href="{{asset('css/article.css')}}" rel="stylesheet">
 
     <script src="http://vuejs.org/js/vue.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('plugs/mditor/mditor.js')}}"></script>
     <script src="{{asset('js/basic.js')}}"></script>
 
-    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.6.0/styles/hybrid.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+    <link href="{{asset('css/hybrid.min.css')}}" rel="stylesheet">
+    <script src="{{asset('js/highlight.min.js')}}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <style>
@@ -122,16 +122,6 @@
                                 {!! $cm->text !!}
                             </div>
                         @endforeach
-{{--                        <div class="signal-comment">--}}
-{{--                            <div class="comment-profile">--}}
-{{--                                <span>小虎</span>--}}
-{{--                                <span>发布于</span>--}}
-{{--                                <span>2021-03-01 15:30:21</span>--}}
-{{--                            </div>--}}
-{{--                            <div>上面说的对啊</div>--}}
-{{--                            <br>--}}
-{{--                            <div>对吧对吧</div>--}}
-{{--                        </div>--}}
                         <div class="comment-editor">
                             <div class="left-editor">
                                 <hm>Post Comment</hm>

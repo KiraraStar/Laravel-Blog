@@ -2,7 +2,7 @@
 @section('title','Links | 链接')
 @section('style')
     <style>
-        line{
+        line {
             display: block;
             margin: 4px 0;
             width: 100%;
@@ -12,13 +12,15 @@
             background-repeat: repeat-x;
             opacity: .5;
         }
-        h5{
+
+        h5 {
             vertical-align: center;
             padding: 4px;
             margin: 0;
             font-size: 16px;
         }
-        .h5-intro{
+
+        .h5-intro {
             color: #464646;
             padding: 4px;
             margin: 0;
@@ -27,18 +29,21 @@
             white-space: nowrap;
             font-weight: bolder;
         }
-        .links-container{
+
+        .links-container {
             margin: 40px auto;
             width: 880px;
             background-color: transparent;
             height: auto;
             min-height: 200px;
         }
-        .link-first-tap{
+
+        .link-first-tap {
             display: flex;
             flex-wrap: wrap;
         }
-        .link-first-tap>div{
+
+        .link-first-tap > div {
             box-sizing: border-box;
             padding: 4px 8px;
             border: 2px lightgrey solid;
@@ -51,7 +56,8 @@
             white-space: nowrap;
             cursor: pointer;
         }
-        .link-first-tap>span{
+
+        .link-first-tap > span {
             display: block;
             width: 100%;
             height: 20px;
@@ -61,14 +67,16 @@
             cursor: default;
             margin: 16px auto;
         }
-        .link-first-tap>span>span{
+
+        .link-first-tap > span > span {
             display: inline-block;
             width: 2px;
             background-color: #66BAB7;
             height: 100%;
             margin-right: 8px;
         }
-        .link-first-tap>span>i{
+
+        .link-first-tap > span > i {
             display: inline-block;
             height: 20px;
             vertical-align: top;
@@ -88,7 +96,7 @@
             <div class="link-box" id="github">
                 <h5 style="color: #66BAB7">Github</h5>
                 <line></line>
-                <div class="h5-intro">Github的网址</div>
+                <div class="h5-intro">Github</div>
             </div>
         </div>
         <div class="link-first-tap">
@@ -130,48 +138,48 @@
 @endsection
 @section('script')
     <script>
-        $('.link-box').hover(function (){
+        $('.link-box').hover(function () {
             $(this).css({
-                borderColor : '#66BAB7',
+                borderColor: '#66BAB7',
                 boxShadow: '2px 2px 3px lightblue',
-                transition : 'all .2s linear'
+                transition: 'all .2s linear'
             })
             $(this).find('h5').css({
                 marginLeft: '80px',
-                transition : 'all .2s linear'
+                transition: 'all .2s linear'
             })
             $(this).find('line').css({
                 opacity: '0',
-                transition : 'all .1s linear'
+                transition: 'all .1s linear'
             })
-        },function (){
+        }, function () {
             $(this).css({
-                borderColor : 'lightgrey',
+                borderColor: 'lightgrey',
                 boxShadow: 'none',
-                transition : 'all .2s linear'
+                transition: 'all .2s linear'
             })
             $(this).find('h5').css({
                 marginLeft: '0',
-                transition : 'all .1s linear'
+                transition: 'all .1s linear'
             })
             $(this).find('line').css({
                 opacity: '1',
-                transition : 'all .2s linear'
+                transition: 'all .2s linear'
             })
         })
-        $('#github').click(function (){
+        $('#github').click(function () {
             window.open('https://github.com/KiraraStar')
         })
-        $('#soptq').click(()=>{
+        $('#soptq').click(() => {
             window.open('https://soptq.me/')
         })
-        $('#2dfan').click(()=>{
+        $('#2dfan').click(() => {
             window.open('https://galge.fun/')
         })
-        $('#nip').click(()=>{
+        $('#nip').click(() => {
             window.open('https://nipponcolors.com/')
         })
-        $('#pixiv').click(()=>{
+        $('#pixiv').click(() => {
             window.open('https://pixivel.moe/')
         })
     </script>
