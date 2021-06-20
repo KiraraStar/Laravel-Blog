@@ -1,0 +1,328 @@
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient-y {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient-x {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.momo-mizusagi {
+    background: linear-gradient(to bottom, #DC9FB4, #0eb0c9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shiro-container {
+    font-family: "新宋体", "Courier New", sans-serif;
+    width: 100%;
+    height: 100vh;
+    /*background: linear-gradient(to bottom, whitesmoke, #91989F);*/
+    /*background: linear-gradient(to bottom,#FEDFE1,#66BAB7);*/
+
+}
+
+.shiro-header {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+
+    background: linear-gradient(60deg, #DC9FB4, #FEDFE1, #81C7D4, #66BAB7);
+    background-size: 400% 400%;
+    animation: Gradient-y 15s ease infinite;
+
+    z-index: 2;
+}
+
+.shiro-content {
+    background: whitesmoke;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    min-height: 100vh;
+    opacity: .75;
+    z-index: 2;
+}
+
+footer {
+    margin-top: 24px;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0px;
+    height: auto;
+    width: 100%;
+    opacity: .8;
+    /*background-color: #66BAB7;*/
+    background: linear-gradient(to left, #DC9FB4, #FEDFE1, #81C7D4, #66BAB7);
+    background-size: 400% 100%;
+    animation: Gradient-x 15s ease infinite;
+}
+
+footer > div {
+    text-align: center;
+    color: white;
+    cursor: default;
+}
+
+
+.shiro-header > * {
+    text-align: center;
+}
+
+.shiro-header .header-box {
+    width: 80%;
+    margin: 8px auto;
+    border-radius: 8px;
+    background: transparent;
+    opacity: .8;
+    padding: 0 4px;
+}
+
+.shiro-header .links a {
+    display: block;
+}
+
+.shiro-header .links a:link, .shiro-header .links a:visited, .shiro-header .links a:hover, .shiro-header .links a:active {
+    text-decoration: none;
+    background: linear-gradient(to bottom, #81C7D4, #00896C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 12px;
+}
+
+.shiro-header .links .a-active {
+    background: linear-gradient(to bottom, whitesmoke, #FEDFE1) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.shiro-header .links-box {
+    width: 64%;
+    font-size: 18px;
+
+}
+
+.shiro-header .header-search {
+    box-sizing: border-box;
+    box-shadow: 0px 2px 1rem #FEDFE1;
+    background: whitesmoke;
+    width: 64%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 20px;
+    opacity: .9;
+    color: #66BAB7;
+}
+
+.shiro-header .link-active {
+    width: 64%;
+    font-size: 18px;
+    color: whitesmoke;
+    background-color: #66BAB7;
+    box-shadow: 0 2px 12px #81C7D4;
+}
+
+.shiro-header .links-box:hover {
+    /*background: #BDC0BA;*/
+    background: #FEDFE1;
+    opacity: .5;
+    transition: all .5s linear;
+}
+
+.shiro-header .header-next {
+    margin-top: 40px;
+}
+
+.shiro-header .header-title {
+    cursor: default;
+    margin: 64px auto;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.shiro-header::-webkit-scrollbar {
+    display: none;
+}
+
+.shiro-content {
+    position: absolute;
+    right: 0;
+    left: 280px;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    z-index: 2;
+}
+
+.canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.shiro-content .shiro-content-card {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #ebeef5;
+    background-color: whitesmoke;
+    color: #303133;
+    transition: .3s;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.shiro-content .article-card {
+    min-height: 100vh;
+}
+
+.shiro-content .content-discovery {
+    color: #66BAB7;
+    cursor: default;
+    padding: 8px;
+
+}
+.shiro-content .content-discovery h2{
+    margin-bottom: 0;
+}
+.shiro-content .content-discovery h2:hover, .shiro-content .content-discovery h3:hover {
+    color: #D0104C;
+
+    transition: all .2s linear;
+}
+
+.shiro-content .top-article {
+    font-weight: bolder;
+    background: linear-gradient(to bottom, #0eb0c9, #1491a8, #10AEC2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shiro-content  .shiro-home article {
+    display: flex;
+    border-bottom: 1px solid rgba(102, 186, 183, .5);
+    margin: 36px auto;
+}
+
+.shiro-content  .shiro-home article .title-image {
+    display: block;
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.shiro-content  .shiro-home article .article-content {
+    padding: 8px;
+    width: 100%;
+    color: #66BAB7;
+}
+
+.shiro-content  .shiro-home article .article-content h1 {
+    cursor: default;
+}
+
+.shiro-content  .shiro-home article .article-content .main-part {
+    display: block;
+    width: 100%;
+    /* padding-top: 5px; */
+    margin: 16px 0;
+    height: auto;
+    border-radius: 5px;
+    line-height: 18px;
+    max-height: 54px;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    font-weight: bolder;
+}
+
+.shiro-content  .shiro-home article .main-part a:link, article .main-part a:visited, article .main-part a:hover, article .main-part a:active {
+    text-decoration: none;
+    color: #66BAB7;
+    word-wrap: break-word;
+    text-overflow: clip;
+}
+
+.shiro-content .shiro-home  article .article-content .main-part a:hover {
+    color: #DC9FB4;
+    transition: all .2s linear;
+}
+
+.shiro-content  .shiro-home article .date {
+    cursor: default;
+    height: auto;
+    margin: 8px 0;
+    font-weight: bolder;
+}
+
+.shiro-content .shiro-home  article .show-date > svg {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.shiro-content  .shiro-home article .show-date > div {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.shiro-content  .shiro-home article .info {
+    margin: 8px auto;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.shiro-content .shiro-home  article .info a:link, article .info a:visited, article .info a:hover, article .info a:active {
+    text-decoration: none;
+    color: #66BAB7;
+}
+
+.shiro-content .shiro-home article .info span {
+    padding: 0 4px;
+}
+
+.shiro-content .margin-change {
+    margin: 0 auto;
+    max-width: 1000px;
+}

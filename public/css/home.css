@@ -386,4 +386,7 @@ article:nth-child(odd) > .art-right {
     .art-content > a > div {
         padding: 0;
     }
+    .aplayer{
+        display: none;
+    }
 }

@@ -1,0 +1,12 @@
+.justify-between {
+    text-align: center;
+    color: #66BAB7;
+    font-size: 20px;
+}
+
+.justify-between a:link, .justify-between a:visited, .justify-between a:hover, .justify-between a:active {
+    color: #66BAB7;
+}
+.justify-between a:-webkit-any-link{
+    text-decoration: none;
+}
